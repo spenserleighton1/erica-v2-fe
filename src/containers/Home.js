@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../components/Header/Header';
 import Hero from '../components/Hero/Hero'
+import Releases from '../components/Releases/Releases'
 import '../components/App/App.scss';
 import { getPage } from '../services/fetch';
 
@@ -10,6 +11,7 @@ class Home extends Component {
         super(props);
         this.state = { 
            hero: {},
+           homePageContent: []
         };
 
     }
@@ -17,23 +19,44 @@ class Home extends Component {
     componentDidMount(){
         getPage('7')
             .then(results => {
-                let { title, image, description } = results.acf;
+                console.log(results.acf)
+                let { title, image, description, home_flex_content } = results.acf;
             
                 this.setState({
                     hero: {
                         image: image.url,
                         title,
                         description
-                    }
+                    },
+                    homePageContent: home_flex_content
                 })
             })
+    }
+
+    sections = (sections) => {
+        let items = [];
+        let releaseCount = 0;
+        sections.map((section, x) => { 
+            
+            switch(section.acf_fc_layout) {
+                case 'releases':
+                releaseCount ++;
+                    items.push(<Releases key={x} index={releaseCount} data={section}/>);
+                    break;
+                default:
+                }
+        });
+
+        return items;
     }
 
     render() {
         return (
             <div>
-                <Header />
+                {/* <Header /> */}
                 <Hero {...this.state.hero} />
+                { this.sections(this.state.homePageContent) }
+
             </div>
         );
     }

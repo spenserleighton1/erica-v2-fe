@@ -4,7 +4,7 @@
     background-size: cover;
    
     .hero-overlay{
-        padding: 0 100px;
+        padding: 0 35% 0 100px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -13,12 +13,19 @@
         height: 100%;
         background-color: rgba($color: #3A150B, $alpha: .9);
         color: #D9A532;
+        text-align: left;
 
         h1{
-            font-size: 5em;
+            font-size: 7em;
             color: #CF4B2D;
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-weight: 700;
+            line-height: .9;
+        }
+
+        p{
+            font-size: 1.5em;
         }
     }
 }
