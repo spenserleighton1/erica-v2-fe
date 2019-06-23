@@ -1,0 +1,24 @@
+.hero{
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+   
+    .hero-overlay{
+        padding: 0 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;    
+        width: 100vw;
+        height: 100%;
+        background-color: rgba($color: #3A150B, $alpha: .9);
+        color: #D9A532;
+
+        h1{
+            font-size: 5em;
+            color: #CF4B2D;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+}
