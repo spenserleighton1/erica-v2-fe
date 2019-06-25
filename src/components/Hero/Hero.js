@@ -5,7 +5,6 @@ import './Hero.scss';
 // import Col from 'react-bootstrap/Col';
 
 function Hero(props) {
-  console.log('props', props.image);
   
   return ( 
     <div className="hero" style={{backgroundImage: `url(${ props.image })`}}>

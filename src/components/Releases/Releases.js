@@ -7,12 +7,10 @@ import Col from 'react-bootstrap/Col';
 function Releases(props) {
 
     const displayReleases = (release) => {
-        console.log('release,', release.data.additional_links)
-
         let rowReverse = (release.index % 2) === 0 ? 'row-reverse' : '';
 
         let links = release.data.additional_links.map((link) => {
-            console.log(link)
+
             return <a href={ link.link_url }>{ link.link_text }</a>
         })
 

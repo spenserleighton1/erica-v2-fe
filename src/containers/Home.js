@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../components/Header/Header';
 import Hero from '../components/Hero/Hero'
 import Releases from '../components/Releases/Releases'
+import Publications from '../components/Publications/Publications'
 import '../components/App/App.scss';
 import { getPage } from '../services/fetch';
 
@@ -34,6 +35,7 @@ class Home extends Component {
     }
 
     sections = (sections) => {
+        console.log('From home page', sections)
         let items = [];
         let releaseCount = 0;
         sections.map((section, x) => { 
@@ -42,6 +44,10 @@ class Home extends Component {
                 case 'releases':
                 releaseCount ++;
                     items.push(<Releases key={x} index={releaseCount} data={section}/>);
+                    break;
+                case 'publications':
+                releaseCount ++;
+                    items.push(<Publications key={x} index={x} data={section}/>);
                     break;
                 default:
                 }

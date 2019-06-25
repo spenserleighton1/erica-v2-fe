@@ -1,10 +1,21 @@
+@keyframes heroText {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+@keyframes heroSubText {
+    from {left: -100%;}
+    to {left: 0;}
+  }
+
+
 .hero{
     height: 600px;
     background-position: center;
     background-size: cover;
    
     .hero-overlay{
-        padding: 0 35% 0 100px;
+
+        padding: 0 35% 50px 100px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -14,6 +25,7 @@
         background-color: rgba($color: #3A150B, $alpha: .9);
         color: #D9A532;
         text-align: left;
+        position: relative;
 
         h1{
             font-size: 7em;
@@ -22,10 +34,15 @@
             letter-spacing: 1px;
             font-weight: 700;
             line-height: .9;
+            animation: heroText 3s;
         }
 
         p{
             font-size: 1.5em;
+            position: absolute;
+            bottom: 130px;
+            max-width: 65%;
+            animation: heroSubText .5s;
         }
     }
 }
