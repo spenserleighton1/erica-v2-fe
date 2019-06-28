@@ -20,14 +20,16 @@ class Releases extends Component {
 
     }
 
-    // let links = release.data.additional_links.map((link) => {
-    //     console.log(link)
-    //     return <a href={ link.link_url }>{ link.link_text }</a>
-    // })
+    generateLinks = (links) => {
+        return links.map((link) => {
+            return <a href={ link.link_url }>{ link.link_text }</a>
+        })
+    } 
 
     generateSlides = (slides) => {
         return slides.map((release, index) => {
-            console.log('test the slide', release)
+            // console.log('test the slide', release.additional_links)
+            let links = this.generateLinks(release.additional_links)
             return (
                 <Row key={ index } className="test-me">
                     <Col md={4} sm={12}>
@@ -38,7 +40,7 @@ class Releases extends Component {
                                     <div className="overlay">
                                         <h1>{ release.publisher_title }</h1>
                                         <div className="overlay-divider"></div>
-                                        {/* { links } */}
+                                        { links }
                                     </div>
                                 </div>
                             </a>
@@ -49,8 +51,8 @@ class Releases extends Component {
                     <div className="release-detail">
                         <h3>{ release.title }</h3>
                         <div className="detail-divider"></div>
+                        <div className="release-links">{ links }</div>    
                         <p>{ release.description }</p>    
-                        {/* <div className="release-links">{ links }</div>     */}
                         <div className="release-reviews-container">
 
                         </div>
@@ -67,9 +69,9 @@ class Releases extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: true,
+      arrows: false,
       autoPlay: true,
-      speed: 1000
+
     };
     return (
         <Container fluid={true} className="releases-container">
