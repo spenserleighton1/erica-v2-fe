@@ -2,33 +2,51 @@
     from {width: 0%;}
     to {width: 60%}
   }
-
+.test-me{
+    display: flex!important;
+}
 .releases-container{
-    // min-height: 600px;
-    margin-left: 0;
-    margin-right: 0;
+    min-height: 600px;
+    background-color: #6FAD9C;
+    padding: 15px;
+    text-align: left;
+    overflow: hidden;
 
-    .row-reverse{
-        flex-direction: row-reverse;
+    h1{
+        color: #EDE5C1;
+        text-transform: uppercase;
+        letter-spacing: 1.25px;
+        font-weight: 700;
+        padding-bottom: 40px;
+        padding-top: 30px;
+        font-size: 2.8em;
     }
 
-    .release-left{
-        background-color: #D9A532;
-        padding: 60px;
+    .release-image{
+        // width: 300px;
     }
-    .release-right{
-        background-color: #7DB6A5;
-        padding: 60px;
+    // .row-reverse{
+    //     flex-direction: row-reverse;
+    // }
 
-    }
+    // .release-left{
+    //     background-color: #D9A532;
+    //     padding: 60px;
+    // }
+    // .release-right{
+    //     background-color: #7DB6A5;
+    //     padding: 60px;
+
+    // }
     
     .release-image-container{
         
         .image{
             background-position: center;
             background-size: cover;
-            height: 460px;
+            padding-bottom: 174%;
             position: relative;
+            width: calc(100% + 30px);
 
             .overlay{
                 overflow: hidden;
@@ -43,6 +61,8 @@
                 h1{
                     font-size: 12px;
                     font-weight: 900;
+                    color: #75321C;
+                    padding: 0;
                 }
                 .overlay-divider{
                     height: 2px;
@@ -94,7 +114,7 @@
         text-align: left;
 
         h3{
-            font-size: 5em;
+            font-size: 3em;
             line-height: .9;
             font-weight: 700;
             text-transform: uppercase;
@@ -135,5 +155,19 @@
             }
         }
         
+    }
+    @media (min-width: 768px) {
+        padding: 30px;
+        
+        h1{
+            font-size: 85px;
+        }
+        .release-image-container{
+        
+            .image{
+                padding-bottom: 160%;
+                width: 100%;
+            }
+        }
     }
 }

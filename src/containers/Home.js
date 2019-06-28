@@ -37,16 +37,13 @@ class Home extends Component {
     sections = (sections) => {
         console.log('From home page', sections)
         let items = [];
-        let releaseCount = 0;
         sections.map((section, x) => { 
             
             switch(section.acf_fc_layout) {
                 case 'releases':
-                releaseCount ++;
-                    items.push(<Releases key={x} index={releaseCount} data={section}/>);
+                    items.push(<Releases key={x} index={x} data={section}/>);
                     break;
                 case 'publications':
-                releaseCount ++;
                     items.push(<Publications key={x} index={x} data={section}/>);
                     break;
                 default:

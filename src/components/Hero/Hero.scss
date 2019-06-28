@@ -9,17 +9,17 @@
 
 
 .hero{
-    height: 600px;
+    height: 400px;
     background-position: center;
     background-size: cover;
    
     .hero-overlay{
 
-        padding: 0 35% 50px 100px;
+        padding: 15px;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;    
+        justify-content: flex-end;    
         width: 100vw;
         height: 100%;
         background-color: rgba($color: #3A150B, $alpha: .9);
@@ -28,7 +28,7 @@
         position: relative;
 
         h1{
-            font-size: 7em;
+            font-size: 3em;
             color: #CF4B2D;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -38,11 +38,27 @@
         }
 
         p{
-            font-size: 1.5em;
-            position: absolute;
-            bottom: 130px;
-            max-width: 65%;
+            font-size: 1em;
+            // position: absolute;
+            // bottom: 130px;
+            // max-width: 65%;
             animation: heroSubText .5s;
+        }
+    }
+    @media (min-width: 768px) {
+        height: 600px;
+
+        .hero-overlay{
+            padding: 0 35% 50px 100px;
+            justify-content: center;    
+
+            h1{
+                font-size: 7em;
+            }
+
+            p{
+                font-size: 1.5em;
+            }
         }
     }
 }

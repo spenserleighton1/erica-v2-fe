@@ -1,16 +1,15 @@
 .publications-container{
     background-color: #CF4B2D;
     // min-height: 500px;
-    padding: 30px;
+    padding: 15px;
     text-align: left;
     h1{
         color: #EDE5C1;
         text-transform: uppercase;
         letter-spacing: 1.25px;
         font-weight: 700;
-        padding-bottom: 15px;
         padding-top: 30px;
-        font-size: 85px;
+        font-size: 2.5em;
     }
     h2{
         color: #EDE5C1;
@@ -19,13 +18,13 @@
         font-weight: 700;
         padding-bottom: 15px;
         padding-top: 25px;
-        font-size: 2.5em;
+        font-size: 1.8em;
     }
     .publication{
 
         .publication-detail{
             background-color: rgba($color: #EDE5C1, $alpha: 0.1);
-            padding: 15px;
+            padding: 10px;
             margin-bottom: 10px;
             border-left: 2px solid #D8A432;
             transition: .2s;
@@ -34,7 +33,7 @@
             }
 
             a{
-                font-size: 1.2em;
+                font-size: 1em;
                 display: block;
                 color: #EDE5C1;
                 text-transform: uppercase;
@@ -59,6 +58,29 @@
                     span{
                         padding: 0 10px;
                     }
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        padding: 30px;
+
+        h1{
+            font-size: 85px;
+            padding-bottom: 15px;
+        }
+        h2{
+            font-size: 2.5em;
+        }
+
+        .publication{
+            .publication-detail{
+                padding: 15px;
+                a{
+                    font-size: 1.2em;
+                }
+                a.pub-link{
+                    font-size: .6em;
                 }
             }
         }
