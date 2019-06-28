@@ -3,6 +3,7 @@ import Header from '../components/Header/Header';
 import Hero from '../components/Hero/Hero'
 import Releases from '../components/Releases/Releases'
 import Publications from '../components/Publications/Publications'
+import About from '../components/About/About'
 import '../components/App/App.scss';
 import { getPage } from '../services/fetch';
 
@@ -45,6 +46,9 @@ class Home extends Component {
                     break;
                 case 'publications':
                     items.push(<Publications key={x} index={x} data={section}/>);
+                    break;
+                case 'about_section':
+                    items.push(<About key={x} index={x} data={section}/>);
                     break;
                 default:
                 }

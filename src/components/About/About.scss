@@ -1,0 +1,11 @@
+.about-container{
+    min-height: 500px;
+    // background-color: #3A150B; 
+    background-color: #D8A432; 
+
+    .about-image{
+        background-position: center;
+        background-size: cover;
+        padding-bottom: 75%;
+    }
+}
