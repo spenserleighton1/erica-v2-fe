@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/erica-v2-fe/static/css/main.b49eafbb.chunk.css",
+    "main.js": "/erica-v2-fe/static/js/main.dabd9bac.chunk.js",
+    "main.js.map": "/erica-v2-fe/static/js/main.dabd9bac.chunk.js.map",
+    "runtime~main.js": "/erica-v2-fe/static/js/runtime~main.c1e56257.js",
+    "runtime~main.js.map": "/erica-v2-fe/static/js/runtime~main.c1e56257.js.map",
+    "static/css/2.510409cd.chunk.css": "/erica-v2-fe/static/css/2.510409cd.chunk.css",
+    "static/js/2.faba0899.chunk.js": "/erica-v2-fe/static/js/2.faba0899.chunk.js",
+    "static/js/2.faba0899.chunk.js.map": "/erica-v2-fe/static/js/2.faba0899.chunk.js.map",
+    "index.html": "/erica-v2-fe/index.html",
+    "precache-manifest.2e38aa739d61a3e18feca64a53c9e4c5.js": "/erica-v2-fe/precache-manifest.2e38aa739d61a3e18feca64a53c9e4c5.js",
+    "service-worker.js": "/erica-v2-fe/service-worker.js",
+    "static/css/2.510409cd.chunk.css.map": "/erica-v2-fe/static/css/2.510409cd.chunk.css.map",
+    "static/css/main.b49eafbb.chunk.css.map": "/erica-v2-fe/static/css/main.b49eafbb.chunk.css.map"
+  }
+}
