@@ -70,16 +70,17 @@ class Events extends Component {
     
     render() {
         let toDisplay = this.state.display === 'upcoming' ? this.displayEvents(this.state.upcoming) : this.displayEvents(this.state.past) 
+        let buttonClassU = this.state.display === 'upcoming' ? 'active' : '';
+        let buttonClassP = this.state.display === 'past' ? 'active' : '';
         return (
-            <Container fluid={true} className="events-container">
+            <Container fluid={true} className="events-container shrink">
                 <Row className="events-nav">
                     <Col sm={6}>
                         <h1>Events.</h1>
                     </Col>
                     <Col sm={6} className="nav">
-                        <button onClick={ () => this.handleClick('u') }>Upcoming</button>
-                        <span>|</span>
-                        <button onClick={ () => this.handleClick('p') }>Past</button>
+                        <button className={ buttonClassU } onClick={ () => this.handleClick('u') }>Upcoming</button>
+                        <button className={ buttonClassP } onClick={ () => this.handleClick('p') }>Past</button>
                     </Col>
 
                 </Row>
