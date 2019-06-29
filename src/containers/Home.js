@@ -4,6 +4,7 @@ import Hero from '../components/Hero/Hero'
 import Releases from '../components/Releases/Releases'
 import Publications from '../components/Publications/Publications'
 import About from '../components/About/About'
+import Events from '../components/Events/Events'
 import '../components/App/App.scss';
 import { getPage } from '../services/fetch';
 
@@ -21,7 +22,6 @@ class Home extends Component {
     componentDidMount(){
         getPage('7')
             .then(results => {
-                console.log(results.acf)
                 let { title, image, description, home_flex_content } = results.acf;
             
                 this.setState({
@@ -36,7 +36,6 @@ class Home extends Component {
     }
 
     sections = (sections) => {
-        console.log('From home page', sections)
         let items = [];
         sections.map((section, x) => { 
             
@@ -49,6 +48,9 @@ class Home extends Component {
                     break;
                 case 'about_section':
                     items.push(<About key={x} index={x} data={section}/>);
+                    break;
+                case 'events':
+                    items.push(<Events key={x} index={x} data={section}/>);
                     break;
                 default:
                 }

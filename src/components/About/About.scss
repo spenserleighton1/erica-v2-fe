@@ -1,11 +1,42 @@
 .about-container{
     min-height: 500px;
-    // background-color: #3A150B; 
     background-color: #D8A432; 
+    text-align: left;
+    padding: 15px;
+
+    h1{
+        color: #EDE5C1;
+        text-transform: uppercase;
+        letter-spacing: 1.25px;
+        font-weight: 700;
+        padding-top: 30px;
+        font-size: 2.5em;
+    }
+
+    .about-text{
+        background-color: rgba($color: #EDE5C1, $alpha: 0.2);
+        padding: 10px;
+        margin-bottom: 15px;
+        color: #75321C;
+        font-size: .95em
+    }
 
     .about-image{
         background-position: center;
         background-size: cover;
         padding-bottom: 75%;
+    }
+    @media (min-width: 768px) {
+        padding: 30px;
+
+        h1{
+            font-size: 85px;
+            padding-bottom: 15px;
+        }
+        .about-text{
+            font-size: 1.15em;
+            padding: 20px;
+        }
+    
     }
 }

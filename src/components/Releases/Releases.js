@@ -15,7 +15,6 @@ class Releases extends Component {
     }
 
     componentDidMount = () => {
-        console.log('slides',this.props.data.release)
         this.setState({ slides: this.generateSlides(this.props.data.release)})
 
     }
@@ -28,12 +27,10 @@ class Releases extends Component {
 
     generateSlides = (slides) => {
         return slides.map((release, index) => {
-            // console.log('test the slide', release.additional_links)
             let links = this.generateLinks(release.additional_links)
             return (
                 <Row key={ index } className="test-me">
                     <Col md={4} sm={12}>
-                      {/* <img className="release-image" src={ } alt=""/> */}
                       <div className="release-image-container">
                             <a href={ release.publisher_link }>
                                 <div className="image" style={{backgroundImage: `url(${ release.image.url })`}}>

@@ -7,10 +7,6 @@ import Col from 'react-bootstrap/Col';
 function Publications(props) {
 
     const displaySinglePublication = (publication) => {
-        // publisher_name: "Soft cartel"
-        // publisher_url: "https://google.com"
-        // title: "title"
-        // year: "2068"
 
         return publication.map(pub => {
             return <div className="publication-detail">
@@ -23,7 +19,6 @@ function Publications(props) {
 
     const displayPublications = (publication) => {
         return publication.data.genre.map(pub => {
-            console.log(pub)
             return <Col md={6} sm={12}>
                     <h2>{ pub.genre_title }</h2>
                     <div className="publication">

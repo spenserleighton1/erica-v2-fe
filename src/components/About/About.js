@@ -5,7 +5,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function About(props) {
-    console.log('props',props.data.text)
 
   return (
 
@@ -13,7 +12,9 @@ function About(props) {
         <h1>About.</h1>
         <Row>
             <Col md={8}>
+            <div className="about-text">
                 { props.data.text }
+            </div>
             </Col>
             <Col md={4}>
                 <div className="about-image" style={{backgroundImage: `url(${ props.data.image.url })`}}>
