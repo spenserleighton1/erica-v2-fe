@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/erica-v2-fe/precache-manifest.2e38aa739d61a3e18feca64a53c9e4c5.js"
+  "/erica-v2-fe/precache-manifest.a58805cf623781330a357433e2e4cbaf.js"
 );
 
 self.addEventListener('message', (event) => {
