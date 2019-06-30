@@ -20,7 +20,7 @@ class Home extends Component {
     }
 
     componentDidMount(){
-        getPage('7')
+        getPage('42')
             .then(results => {
                 let { title, image, description, home_flex_content } = results.acf;
             

@@ -2,5 +2,5 @@ import apiKey from './apiKey'
 
 export default {
   apiKey,
-  url: 'http://localhost:8080/wp-json/wp/v2'
+  url: 'https://ericacms-4d2e0b.easywp.com/wp-json/wp/v2'
 }
