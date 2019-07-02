@@ -36,14 +36,6 @@ class Events extends Component {
             past
         })
     }
-    // console.log(props.data.events)
-    // description: "this event was a cool event i love going to fun events."
-    // event_date: "12-12-12"
-    // event_name: "Test Event"
-    // event_time: "7:00pm"
-    // image: "http://localhost:8080/wp-content/uploads/2019/06/a.png"
-    // link: "https://google.com"
-    // upcomingpast: "past"
 
     displayEvents = (events) => {
         return events.map((event) => {
@@ -72,8 +64,9 @@ class Events extends Component {
         let toDisplay = this.state.display === 'upcoming' ? this.displayEvents(this.state.upcoming) : this.displayEvents(this.state.past) 
         let buttonClassU = this.state.display === 'upcoming' ? 'active' : '';
         let buttonClassP = this.state.display === 'past' ? 'active' : '';
+        let menuOpen = this.props.menuClass ? 'scale events-container' : 'events-container'
         return (
-            <Container fluid={true} className="events-container shrink">
+            <Container fluid={true} className={ menuOpen } id={this.props.data.acf_fc_layout}>
                 <Row className="events-nav">
                     <Col sm={6}>
                         <h1>Events.</h1>

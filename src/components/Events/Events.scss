@@ -1,11 +1,11 @@
 .events-container{
 
-    // &.shrink{
-    //     -webkit-transform:scale(0.5);
-    //     -moz-transform:scale(0.5);
-    //     -ms-transform:scale(0.5);
-    //     transform:scale(0.5);
-    //     }
+    &.scale {
+        -webkit-transform:scale(0.5);
+        -moz-transform:scale(0.5);
+        -ms-transform:scale(0.5);
+        transform:scale(0.5);
+        }
 
     background-color: #D8672A;
     padding: 15px;

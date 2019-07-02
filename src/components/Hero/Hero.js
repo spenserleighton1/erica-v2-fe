@@ -5,9 +5,10 @@ import './Hero.scss';
 // import Col from 'react-bootstrap/Col';
 
 function Hero(props) {
+  let menuOpen = props.menuClass ? 'scale hero' : 'hero'
   
   return ( 
-    <div className="hero" style={{backgroundImage: `url(${ props.image })`}}>
+    <div className={menuOpen} style={{backgroundImage: `url(${ props.image })`}}>
       <div className="hero-overlay">
         <h1>{ props.title }</h1>
         <p>{ props.description }</p>

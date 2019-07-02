@@ -5,6 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function Publications(props) {
+    let menuOpen = props.menuClass ? 'scale publications-container' : 'publications-container'
 
     const displaySinglePublication = (publication) => {
 
@@ -34,8 +35,9 @@ function Publications(props) {
     }
 
   return (
+    
 
-    <Container fluid={true} className="publications-container">
+    <Container fluid={true} className={menuOpen} id={props.data.acf_fc_layout}>
         <h1>Publications.</h1>
         <Row>
             {displayPublications(props)}

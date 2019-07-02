@@ -1,0 +1,20 @@
+
+.front-page{
+    .menu-btn{
+        color: green;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 10000;
+    }
+    
+    .for-menu{
+
+    &.scale {
+        transition: .2s;
+        transform:scale(0.2) translate(-200%, -200%);
+        height: 0;
+        }
+
+    }
+}

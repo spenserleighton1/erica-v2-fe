@@ -4,10 +4,11 @@ import './Header.scss';
 // import Row from 'react-bootstrap/Row';
 // import Col from 'react-bootstrap/Col';
 
-function Header() {
+function Header(props) {
+  console.log(props)
   return (
     <div className="header">
-    here we go erica here we go!!!!!!!
+      <button onClick={ () => props.toggleMenu() }>Open</button>
     </div>
   );
 }

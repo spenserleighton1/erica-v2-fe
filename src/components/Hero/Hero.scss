@@ -12,6 +12,10 @@
     height: 400px;
     background-position: center;
     background-size: cover;
+
+    &.scale {
+        display: none;
+        }
    
     .hero-overlay{
 

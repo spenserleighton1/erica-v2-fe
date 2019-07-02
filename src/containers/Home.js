@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import Header from '../components/Header/Header';
 import Hero from '../components/Hero/Hero'
+import Menu from '../components/Menu/Menu'
 import Releases from '../components/Releases/Releases'
 import Publications from '../components/Publications/Publications'
 import About from '../components/About/About'
 import Events from '../components/Events/Events'
 import '../components/App/App.scss';
 import { getPage } from '../services/fetch';
+import './Home.scss'
+// import Slider from "react-slick";
 
 class Home extends Component {
 
@@ -14,6 +17,7 @@ class Home extends Component {
         super(props);
         this.state = { 
            hero: {},
+           menu: false,
            homePageContent: []
         };
 
@@ -35,22 +39,24 @@ class Home extends Component {
             })
     }
 
+    toggleMenu = () => this.setState({ menu: !this.state.menu})
+
     sections = (sections) => {
         let items = [];
         sections.map((section, x) => { 
             
             switch(section.acf_fc_layout) {
                 case 'releases':
-                    items.push(<Releases key={x} index={x} data={section}/>);
+                    items.push(<Releases name="releases" key={x} index={x} data={section} menuClass={ this.state.menu }/>);
                     break;
                 case 'publications':
-                    items.push(<Publications key={x} index={x} data={section}/>);
+                    items.push(<Publications name="publications" key={x} index={x} data={section} menuClass={ this.state.menu }/>);
                     break;
                 case 'about_section':
-                    items.push(<About key={x} index={x} data={section}/>);
+                    items.push(<About name="about" key={x} index={x} data={section} menuClass={ this.state.menu }/>);
                     break;
                 case 'events':
-                    items.push(<Events key={x} index={x} data={section}/>);
+                    items.push(<Events name="events" key={x} index={x} data={section} menuClass={ this.state.menu }/>);
                     break;
                 default:
                 }
@@ -60,12 +66,18 @@ class Home extends Component {
     }
 
     render() {
-        return (
-            <div>
-                {/* <Header /> */}
-                <Hero {...this.state.hero} />
-                { this.sections(this.state.homePageContent) }
 
+        let sections = this.sections(this.state.homePageContent) 
+        let menuStatus = this.state.menu ? 'menu-btn active' : 'menu-btn';
+
+        return (
+            <div class="front-page">
+                  <button className={ menuStatus } onClick={ () => this.toggleMenu() }>Close</button>
+                { this.state.menuC && 
+                    <Menu toggleMenu={ this.toggleMenu } potentialSections={ sections }/> }
+                {/* <Header toggleMenu={ this.toggleMenu }/> */}
+                <Hero {...this.state.hero} menuClass={ this.state.menu }/>
+                { sections }
             </div>
         );
     }

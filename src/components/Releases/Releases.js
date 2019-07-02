@@ -60,7 +60,7 @@ class Releases extends Component {
         });
     }
   render() {
-    var settings = {
+    let settings = {
       dots: false,
       infinite: true,
       speed: 500,
@@ -68,16 +68,18 @@ class Releases extends Component {
       slidesToScroll: 1,
       arrows: false,
       autoPlay: true,
-
     };
+
+    let menuOpen = this.props.menuClass ? 'scale releases-container' : 'releases-container';
+    
     return (
-        <Container fluid={true} className="releases-container">
+        <Container fluid={true} className={menuOpen} id={this.props.data.acf_fc_layout}>
             <h1 className="fick">Releases.</h1>
             <Slider {...settings}>
                 {this.state.slides}
             </Slider>
         </Container>
-    );
+);
   }
 }
 

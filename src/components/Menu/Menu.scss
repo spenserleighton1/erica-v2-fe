@@ -1,0 +1,33 @@
+.menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: .8);
+    z-index: 9999;
+    transition: .4s;
+
+    ul{
+        list-style-type: none;
+        padding-left: 0;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+
+        a{
+            cursor: pointer;
+            font-size: 2em;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: rgba($color: #ffffff, $alpha: .7);
+            
+        }
+        a:hover{
+            color: rgba($color: #ffffff, $alpha: .9);
+            
+        }
+    }
+}

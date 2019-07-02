@@ -4,6 +4,13 @@
     text-align: left;
     padding: 15px;
 
+    &.scale {
+        -webkit-transform:scale(0.5);
+        -moz-transform:scale(0.5);
+        -ms-transform:scale(0.5);
+        transform:scale(0.5);
+        }
+
     h1{
         color: #EDE5C1;
         text-transform: uppercase;
