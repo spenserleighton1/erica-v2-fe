@@ -1,12 +1,6 @@
 
 .front-page{
-    .menu-btn{
-        color: green;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 10000;
-    }
+
     
     .for-menu{
 
@@ -18,3 +12,74 @@
 
     }
 }
+
+#hambmenu {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 10000;
+    width: 40px;
+    height: 45px;
+    float: left;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  #hambmenu span {
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    vertical-align: middle;
+    margin: 20px 0 0 15px;
+    background: white;
+    border-radius: 8px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+    padding: 0px;
+  }
+  
+  .hambclicker {
+    content: "";
+    height: 48px;
+    width: 55px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    cursor: pointer;
+    z-index: 9;
+  }
+  
+  #hambmenu span:nth-child(1) {
+    top: 0px;
+  }
+  
+  #hambmenu span:nth-child(2), #hambmenu span:nth-child(3) {
+    top: 10px;
+  }
+  
+  #hambmenu span:nth-child(4) {
+    top: 20px;
+  }
+  
+  #hambmenu.isopen span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+    opacity: 0;
+  }
+  
+  #hambmenu.isopen span:nth-child(2) {
+    transform: rotate(45deg);
+  }
+  
+  #hambmenu.isopen span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  
+  #hambmenu.isopen span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+    opacity: 0;
+  }
