@@ -16,7 +16,6 @@ function Menu(props) {
 
   return (
     <div className="menu">
-    
       <ul>
         { menuItems }
       </ul>
