@@ -62,6 +62,7 @@ class Home extends Component {
                 }
         });
 
+        
         return items;
     }
 
