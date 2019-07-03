@@ -44,7 +44,6 @@ class Home extends Component {
     sections = (sections) => {
         let items = [];
         sections.map((section, x) => { 
-            
             switch(section.acf_fc_layout) {
                 case 'releases':
                     items.push(<Releases name="releases" key={x} index={x} data={section} menuClass={ false }/>);
@@ -61,8 +60,6 @@ class Home extends Component {
                 default:
                 }
         });
-
-
         return items;
     }
 
