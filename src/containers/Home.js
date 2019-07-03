@@ -74,8 +74,7 @@ class Home extends Component {
             <div class="front-page">
                   <div id="hambmenu" onClick={ () => this.toggleMenu() } className={ menuStatus }><span></span><span></span><span></span><span></span></div>
                 { this.state.menu && 
-                    <Menu potentialSections={ sections }/> }
-                {/* <Header toggleMenu={ this.toggleMenu }/> */}
+                    <Menu toggleMenu={ this.toggleMenu } potentialSections={ sections }/> }
                 <Hero {...this.state.hero} menuClass={ this.state.menu }/>
                 { sections }
             </div>

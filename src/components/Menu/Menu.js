@@ -18,7 +18,6 @@ function Menu(props) {
     <div className="menu">
     
       <ul>
-        <li><a onClick={ () => props.toggleMenu() } href='/'>Home</a></li>
         { menuItems }
       </ul>
     </div>
