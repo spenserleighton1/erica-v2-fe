@@ -62,7 +62,7 @@ class Home extends Component {
                 }
         });
 
-        
+
         return items;
     }
 
@@ -76,7 +76,7 @@ class Home extends Component {
                   <div id="hambmenu" onClick={ () => this.toggleMenu() } className={ menuStatus }><span></span><span></span><span></span><span></span></div>
                 { this.state.menu && 
                     <Menu toggleMenu={ this.toggleMenu } potentialSections={ sections }/> }
-                <Hero {...this.state.hero} menuClass={ this.state.menu }/>
+                <Hero {...this.state.hero} />
                 { sections }
             </div>
         );
