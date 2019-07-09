@@ -14,7 +14,7 @@
     h1{
         color: #EDE5C1;
         text-transform: uppercase;
-        letter-spacing: 1.25px;
+        letter-spacing: 5px;
         font-weight: 700;
         padding-top: 30px;
         font-size: 2.5em;
@@ -35,7 +35,6 @@
     }
     @media (min-width: 768px) {
         padding: 30px;
-
         h1{
             font-size: 85px;
             padding-bottom: 15px;
@@ -44,6 +43,5 @@
             font-size: 1.15em;
             padding: 20px;
         }
-    
     }
 }

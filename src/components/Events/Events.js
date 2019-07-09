@@ -69,7 +69,7 @@ class Events extends Component {
             <Container fluid={true} className={ menuOpen } id={this.props.data.acf_fc_layout}>
                 <Row className="events-nav">
                     <Col sm={6}>
-                        <h1>Events.</h1>
+                        <h1>Events</h1>
                     </Col>
                     <Col sm={6} className="nav">
                         <button className={ buttonClassU } onClick={ () => this.handleClick('u') }>Upcoming</button>

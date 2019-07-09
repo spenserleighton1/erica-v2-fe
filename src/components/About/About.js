@@ -10,7 +10,7 @@ let menuOpen = props.menuClass ? 'scale about-container' : 'about-container';
   return (
 
     <Container fluid={true} className={menuOpen} id={props.data.acf_fc_layout}>
-        <h1>About.</h1>
+        <h1>About</h1>
         <Row>
             <Col md={8}>
             <div className="about-text">

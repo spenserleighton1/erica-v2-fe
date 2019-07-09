@@ -74,7 +74,7 @@ class Releases extends Component {
     
     return (
         <Container fluid={true} className={menuOpen} id={this.props.data.acf_fc_layout}>
-            <h1 className="fick">Releases.</h1>
+            <h1 className="fick">Releases</h1>
             <Slider {...settings}>
                 {this.state.slides}
             </Slider>

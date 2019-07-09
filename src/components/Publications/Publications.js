@@ -38,7 +38,7 @@ function Publications(props) {
     
 
     <Container fluid={true} className={menuOpen} id={props.data.acf_fc_layout}>
-        <h1>Publications.</h1>
+        <h1>Publications</h1>
         <Row>
             {displayPublications(props)}
         </Row>

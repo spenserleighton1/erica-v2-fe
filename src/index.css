@@ -5,9 +5,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Open Sans', sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+div,a,p,span{
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: 'Chicle', cursive;
+  letter-spacing: 5px;
 }
